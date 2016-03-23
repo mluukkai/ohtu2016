@@ -1,17 +1,20 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Kauppa {
 
-    private Varasto varasto;
-    private Pankki pankki;
+    private Warehouse varasto;
+    private Bank pankki;
     private Ostoskori ostoskori;
-    private Viitegeneraattori viitegeneraattori;
+    private ReferenceGenerator viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa() {
-        varasto = Varasto.getInstance();
-        pankki = Pankki.getInstance();
-        viitegeneraattori = Viitegeneraattori.getInstance();
+    public Kauppa(Warehouse warehouse, Bank bank, ReferenceGenerator referenceGenerator) {
+        varasto = warehouse;
+        pankki = bank;
+        viitegeneraattori = referenceGenerator;
         kaupanTili = "33333-44455";
     }
 
