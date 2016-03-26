@@ -2,11 +2,15 @@ package ohtu;
 
 import ohtu.verkkokauppa.Kauppa;
 import ohtu.verkkokauppa.Kirjanpito;
+import ohtu.verkkokauppa.Pankki;
+import ohtu.verkkokauppa.Varasto;
+import ohtu.verkkokauppa.Viitegeneraattori;
 
 public class Main {
 
     public static void main(String[] args) {
-        Kauppa kauppa = new Kauppa();
+        Kirjanpito kirjanpito = new Kirjanpito();
+        Kauppa kauppa = new Kauppa(new Pankki(kirjanpito), new Varasto(kirjanpito), new Viitegeneraattori());
 
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
@@ -25,7 +29,7 @@ public class Main {
         kauppa.tilimaksu("Arto Vihavainen", "3425-1652");
 
         // kirjanpito
-        for (String tapahtuma : Kirjanpito.getInstance().getTapahtumat()) {
+        for (String tapahtuma : kirjanpito.getTapahtumat()) {
             System.out.println(tapahtuma);
         }
     }
