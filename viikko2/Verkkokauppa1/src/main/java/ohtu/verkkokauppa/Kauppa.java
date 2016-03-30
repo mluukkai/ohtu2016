@@ -11,7 +11,6 @@ public class Kauppa {
     private Viitegeneraattori viitegeneraattori;
     private String kaupanTili;
 
-    @Autowired
     public Kauppa(VarastoInterface v, PankkiInterface p, ViitegeneraattoriInterface g) {
         varasto = (Varasto) v;
         pankki = (Pankki) p;
