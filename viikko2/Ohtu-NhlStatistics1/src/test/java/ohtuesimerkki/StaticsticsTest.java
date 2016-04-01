@@ -38,5 +38,42 @@ public class StaticsticsTest {
     }
 
     @Test
-    public void hello() {}
+    public void findsPlayers() {
+        assertNotNull(stats.search("Semenko"));
+        assertNotNull(stats.search("Lemieux"));
+        assertNotNull(stats.search("Yzerman"));
+    }
+    @Test
+    public void wontFindNonExistingPlayers() {
+        assertNull(stats.search("gaegewrg"));
+    }
+
+    @Test
+    public void findTeam() {
+        List players = stats.team("EDM");
+        
+        assertEquals(players.size(), 3);
+        assertTrue(players.contains(stats.search("Semenko")));
+        assertTrue(players.contains(stats.search("Kurri")));
+        assertTrue(players.contains(stats.search("Gretzky")));
+    }
+    
+    @Test
+    public void nonExistingTeamHasZeroPlayers() {
+        List players = stats.team("GEWRG");
+        assertEquals(players.size(), 0);
+    }
+    
+    @Test
+    public void getTopScorer() {
+        List players = stats.topScorers(1);
+        assertEquals(players.size(), 1);
+        assertTrue(players.contains(stats.search("Gretzky")));
+    }
+    
+    @Test
+    public void getZeroTopScorers() {
+        List players = stats.topScorers(0);
+        assertEquals(players.size(), 0);
+    }
 }
