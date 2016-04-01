@@ -59,4 +59,15 @@ public class Player implements Comparable<Player> {
     public int compareTo(Player t) {
         return t.getPoints()-this.getPoints();
     }
+    
+    public boolean equals(Object o) {
+        if (!o.getClass().equals(Player.class)) return false;
+        
+        Player player = (Player) o;
+        if (!player.getName().equals(name)) return false;
+        if (!player.getTeam().equals(team)) return false;
+        if (player.getGoals()!=goals) return false;
+        if (player.getAssists()!=assists) return false;
+        return true;
+    }
 }
