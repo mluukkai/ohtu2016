@@ -10,6 +10,10 @@
 
     <name>Verkkokauppa1</name>
     <url>http://maven.apache.org</url>
+    
+    <build>
+        <defaultGoal>compile</defaultGoal>
+    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
