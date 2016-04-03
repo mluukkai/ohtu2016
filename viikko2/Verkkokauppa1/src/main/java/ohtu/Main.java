@@ -17,10 +17,11 @@ public class Main {
 //        Kauppa kauppa = new Kauppa(varasto, pankki, viitegen);
         
         ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/spring-context.xml");
-//        Kauppa kauppa = (Kauppa) ctx.getBean("kauppa");
-        Kauppa kauppa = ctx.getBean(Kauppa.class);
-        Kirjanpito kirjanpito = ctx.getBean(Kirjanpito.class);
-
+        Kauppa kauppa = (Kauppa) ctx.getBean("kauppa");
+//        Kauppa kauppa = ctx.getBean(Kauppa.class);
+//        Kirjanpito kirjanpito = ctx.getBean(Kirjanpito.class);
+        Kirjanpito kirjanpito = (Kirjanpito) ctx.getBean("kirjanpito");
+        
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
         kauppa.lisaaKoriin(1);
