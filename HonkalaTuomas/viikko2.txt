@@ -1,0 +1,10 @@
+Erittäin opettavaisia, joskin myös työläitä tehtäviä!
+
+Springin ideaa olisi kenties voinut avata vähän enemmän ennen tehtäviä 10 ja 11.
+
+
+Kynnys kahden viimeisen tehtävän aloittamiselle tuntui tarpeettoman korkealta, kun Spring tuntui konseptuaalisella tasolla niin
+ hämärältä.
+Sitten kun Spring-tehtäviä loppujen lopuksi lähti tekemään, niin  ne olivat oikeastaan kakkoslaskareiden helpoimmat
+
+(vrt. NHLStatisticsin unit-testaukseen tuhraantui paljon enemmän aikaa ja energiaa...)
