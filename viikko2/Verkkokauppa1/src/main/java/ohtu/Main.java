@@ -14,8 +14,7 @@ public class Main {
         
         Kirjanpito k = (Kirjanpito) ctx.getBean("kirjanpito");
         Kauppa kauppa = (Kauppa) ctx.getBean("kauppa");
-
-
+        
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
         kauppa.lisaaKoriin(1);

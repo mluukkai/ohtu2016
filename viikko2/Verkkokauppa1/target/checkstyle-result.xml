@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Accounting.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Pankki.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Bank.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Kirjanpito.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Generator.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Tuote.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Kauppa.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Viitegeneraattori.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Storage.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Ostoskori.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/verkkokauppa/Varasto.java">
+</file>
+<file name="/home/juho/ohtu2016/viikko2/Verkkokauppa1/src/main/java/ohtu/Main.java">
+</file>
+</checkstyle>
