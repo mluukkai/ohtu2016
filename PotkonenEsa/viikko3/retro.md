@@ -1,0 +1,3 @@
+Spritin lopussa pidettävässä retrospertiivissä "Start, Stop, Continue, More of, Less of Wheel" tiimi keskustelee lyhyesti mitä seuraavassa spritissä pitäisi tehdä ja kenties muuttaa verrattuna päättyvään sprinttiin. Ajatukset kirjataan edellä mainittuihin viiteen kategoriaan.
+
+"Glad, Sad, Mad" retrospertiivissä kirjataan kaikkien osallisten spritin aikana tekemät huomiot ylös, ja luokitellaan ne hyviin ja huonoihin. Tämän jälkeen huomiot arvostellaan äänestämällä ja jaetaan tärkeisiin ja vähemmän tärkeisiin. Tärkeistä huomioista keskustellaan, kunnes kaikki huomiot on käsitelty. 
