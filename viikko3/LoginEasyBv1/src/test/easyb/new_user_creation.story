@@ -91,7 +91,7 @@ scenario "creation fails with already taken username and valid pasword", {
     given 'command new user is selected', {
         userDao = new InMemoryUserDao()
         auth = new AuthenticationService(userDao)
-        io = new StubIO("new", "pekka", "akkep") 
+        io = new StubIO("new", "pekka", "akkepip4") 
         app = new App(io, auth)
     }
     when 'a already taken username and valid password are entered', {
