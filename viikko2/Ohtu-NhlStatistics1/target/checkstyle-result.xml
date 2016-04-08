@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/Users/mremes/ohtu2016/ohtu2016/viikko2/Ohtu-NhlStatistics1/src/main/java/ohtuesimerkki/Main.java">
+<error line="4" column="5" severity="error" message="Method length is 15 lines (max allowed is 10)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+</file>
+<file name="/Users/mremes/ohtu2016/ohtu2016/viikko2/Ohtu-NhlStatistics1/src/main/java/ohtuesimerkki/Player.java">
+</file>
+<file name="/Users/mremes/ohtu2016/ohtu2016/viikko2/Ohtu-NhlStatistics1/src/main/java/ohtuesimerkki/PlayerReader.java">
+</file>
+<file name="/Users/mremes/ohtu2016/ohtu2016/viikko2/Ohtu-NhlStatistics1/src/main/java/ohtuesimerkki/Reader.java">
+</file>
+<file name="/Users/mremes/ohtu2016/ohtu2016/viikko2/Ohtu-NhlStatistics1/src/main/java/ohtuesimerkki/Statistics.java">
+</file>
+</checkstyle>
