@@ -1,0 +1,1 @@
+Checkstylessä metodin maksimipituus 10 riviä on aika tiukka, muuten hyödyllisiä tehtäviä :)
