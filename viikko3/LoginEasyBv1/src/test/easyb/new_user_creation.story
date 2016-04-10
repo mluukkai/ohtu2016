@@ -12,7 +12,7 @@ scenario "creation successful with correct username and password", {
     given 'command new user is selected', {
        userDao = new InMemoryUserDao()
        auth = new AuthenticationService(userDao)
-       io = new StubIO("new", "mauri", "iruam" ) 
+       io = new StubIO("new", "mauri", "iruam123d" ) 
        app = new App(io, auth)
     }
  
@@ -25,11 +25,11 @@ scenario "creation successful with correct username and password", {
     }
 }
 
-scenario "can login with succesfully generated account", {
+scenario "can login with successfully generated account", {
     given 'command new user is selected', {
        userDao = new InMemoryUserDao()
        auth = new AuthenticationService(userDao)
-       io = new StubIO("new", "mauri", "iruam", "login", "mauri", "iruam") 
+       io = new StubIO("new", "mauri", "iruam1232", "login", "mauri", "iruam1232") 
        app = new App(io, auth)
     }
  

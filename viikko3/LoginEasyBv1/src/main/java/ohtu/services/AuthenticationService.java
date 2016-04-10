@@ -1,3 +1,4 @@
+
 package ohtu.services;
 
 import ohtu.domain.User;
@@ -40,7 +41,14 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
         // validity check of username and password
+	return usernameCheck(username) || passwordCheck(password);
+    }
 
-        return false;
+    private boolean usernameCheck(String username) {
+	return (username.length() < 3 || !username.matches("[a-zA-Z]+"));
+    }
+
+    private boolean passwordCheck(String password) {
+	return (password.length() < 8 || password.matches("^[a-zA-Z]+$"));
     }
 }
