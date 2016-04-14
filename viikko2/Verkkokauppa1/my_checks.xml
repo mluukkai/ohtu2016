@@ -59,7 +59,19 @@
         <module name="FinalParameters"/>
         <module name="TodoComment"/>
         <module name="UpperEll"/>
-
+        <module name="MethodLength">
+           <property name="tokens" value="METHOD_DEF"/>
+           <property name="max" value="10"/>
+        </module>
+        <module name="NestedIfDepth"/>
+        <module name="NestedForDepth"/>
+        <module name="Indentation"/>
+        <module name="NeedBraces">
+            <property name="allowSingleLineStatement" value="false"/>
+        </module>
+        <module name="CyclomaticComplexity">
+            <property name="max" value="3"/>
+        </module>
     </module>
 
 </module>
