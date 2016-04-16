@@ -1,0 +1,6 @@
+Mukavia tehtäviä ja työmäärä tuntui kohtuullisemmalta kuin parissa aikaisemmissa laskareissa.
+
+easyB-testien kirjoittaminen on hauskaa!
+
+Javan/Mavenin käynnistäminen komentoriviltä ei tosin vieläkään lähde selkäytimestä...
+

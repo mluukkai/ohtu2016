@@ -47,5 +47,8 @@ public class Main {
         for (String tapahtuma : ctx.getBean(Kirjanpito.class).getTapahtumat()) {
             System.out.println(tapahtuma);
         }
+        
+        System.out.println("");
+  
     }
 }

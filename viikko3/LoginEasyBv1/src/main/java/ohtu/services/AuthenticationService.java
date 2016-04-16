@@ -38,9 +38,53 @@ public class AuthenticationService {
         return true;
     }
 
-    private boolean invalid(String username, String password) {
-        // validity check of username and password
+    private boolean checkForLength(String username, String password) {
+        if (username.length() < 3) {
+            System.out.println("username must contain atleast 3 chars");
+            return true;
+        }
 
+        if (password.length() < 8) {
+            System.out.println("password must contain atleast 8 chars");
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkForAlphaNumerics(String username, String password) {
+        boolean passwordHasANumber = false;
+        boolean passwordHasANonAlphaNumeric = false;
+
+        for (int i = 0; i < password.length(); i++) {
+            if (password.charAt(i) >= '0' && password.charAt(i) <= '9') {
+                passwordHasANumber = true;
+            } else if (password.charAt(i) < 'a' || password.charAt(i) > 'z') {
+                passwordHasANonAlphaNumeric = true;
+            }
+        }
+        if (!passwordHasANumber || !passwordHasANonAlphaNumeric) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean invalid(String username, String password) {
+      
+        if (checkForLength(username, password)) {
+            return true;
+        }
+
+        for (int i = 0; i < username.length(); i++) {
+            if (username.charAt(i) < 'a' || username.charAt(i) > 'z') {
+                System.out.println("username can only contain chars a-z");
+                return true;
+            }
+        }
+
+        if (!checkForAlphaNumerics(username, password)) {
+            System.out.println("password must contain atleast one number and one non-alpha-numeric char");
+            return true;
+        }
         return false;
     }
 }
