@@ -14,6 +14,15 @@ public class Tester {
         WebElement element = driver.findElement(By.linkText("login"));       
         element.click(); 
         
+        test1(driver);
+        
+        System.out.println( driver.getPageSource() );
+        
+    }
+    
+    private static void test1(WebDriver driver) {
+        
+        WebElement element;
         System.out.println("==");
         
         System.out.println( driver.getPageSource() );
@@ -25,7 +34,5 @@ public class Tester {
         element.submit();
         
         System.out.println("==");
-        System.out.println( driver.getPageSource() );
-        
     }
 }
