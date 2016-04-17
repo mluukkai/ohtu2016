@@ -22,7 +22,7 @@ public class Main {
 //        Viitegeneraattori viitegen = new Viitegeneraattori();
 //        Kauppa kauppa = new Kauppa(varasto, pankki, viitegen);
 
-        // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
+//       kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
         kauppa.lisaaKoriin(1);
         kauppa.lisaaKoriin(3);
