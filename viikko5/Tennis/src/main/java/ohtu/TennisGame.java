@@ -21,9 +21,6 @@ public class TennisGame {
     }
 
     public String getScore() {
-        String score = "";
-        int tempScore=0;
-        
         if (player1Score == player2Score) {
             return tieScore(player1Score);
         }else if (player1Score >= 4 || player2Score >= 4) {
