@@ -1,0 +1,5 @@
+mvn jxr:jxr checkstyle:check -D"checkstyle.config.location=esa_checks.xml"
+mvn exec:java -Dexec.mainClass=ohtu.App
+mvn integration-test
+
+mvn clean cobertura:cobertura coveralls:report
