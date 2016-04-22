@@ -15,6 +15,16 @@ public class IntJoukkoTest {
         joukko.lisaa(10);
         joukko.lisaa(3);
     }
+    
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void antaaVirheilmoituksenJosKonstruktorissaNegatiivinenKapasiteetti() {
+        IntJoukko j = new IntJoukko(-1);
+    }
+    
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void antaaVirheilmoituksenJosKonstruktorissaNegatiivinenKapasiteettiJaKasvatusarvo() {
+        IntJoukko j = new IntJoukko(-1, -1);
+    }
 
     @Test
     public void lukujaLisattyMaara() {
@@ -56,6 +66,13 @@ public class IntJoukkoTest {
         assertArrayEquals(odotettu, vastaus);
     }
     
+    @Test
+    public void poistoPalauttaaFalseJosLukuaEiTaulussa() {
+        boolean odotettu = joukko.poista(7);
+        assertFalse(odotettu);
+        assertEquals(2, joukko.mahtavuus());
+    }
+    
     
     @Test
     public void toimiiKasvatuksenJalkeen(){
@@ -68,6 +85,73 @@ public class IntJoukkoTest {
         joukko.poista(11);
         assertFalse(joukko.kuuluu(11));
         assertEquals(13, joukko.mahtavuus());
+    }
+    
+    @Test
+    public void poistoToimiiJosPoistettavaViimeisena(){
+        int[] lisattavat = {1,2,4,5,6,7,8,9,11,12,13,14};
+        for (int luku : lisattavat) {
+            joukko.lisaa(luku);
+        }
+        joukko.poista(14);
+        assertFalse(joukko.kuuluu(14));
+        assertEquals(13, joukko.mahtavuus());
+    }
+    
+    @Test
+    public void poistoToimiiJosPoistettavaKeskella(){
+        int[] lisattavat = {1,2,4,5,6,7,8,9,11,12,13,14};
+        for (int luku : lisattavat) {
+            joukko.lisaa(luku);
+        }
+        joukko.poista(8);
+        assertFalse(joukko.kuuluu(8));
+        assertEquals(13, joukko.mahtavuus());
+    }
+    
+    @Test
+    public void yhdisteToimii(){
+        int[] lisattavat1 = {1,2,4,5,6,7};
+        int[] lisattavat2 = {8,9,11};
+        IntJoukko joukko2 = new IntJoukko();
+        for (int luku : lisattavat1) {
+            joukko.lisaa(luku);
+        }
+        for (int luku : lisattavat2) {
+            joukko2.lisaa(luku);
+        }
+        IntJoukko joukko3 = IntJoukko.yhdiste(joukko, joukko2);
+        assertEquals(11, joukko3.mahtavuus());
+    }
+    
+    @Test
+    public void leikkausToimii(){
+        int[] lisattavat1 = {1,2,4,5,6,7};
+        int[] lisattavat2 = {5,6,7,11,12};
+        IntJoukko joukko2 = new IntJoukko();
+        for (int luku : lisattavat1) {
+            joukko.lisaa(luku);
+        }
+        for (int luku : lisattavat2) {
+            joukko2.lisaa(luku);
+        }
+        IntJoukko joukko3 = IntJoukko.leikkaus(joukko, joukko2);
+        assertEquals(3, joukko3.mahtavuus());
+    }
+    
+    @Test
+    public void erotusToimii(){
+        int[] lisattavat1 = {1,2,4,5,6,7};
+        int[] lisattavat2 = {3,4,6,11,14};
+        IntJoukko joukko2 = new IntJoukko();
+        for (int luku : lisattavat1) {
+            joukko.lisaa(luku);
+        }
+        for (int luku : lisattavat2) {
+            joukko2.lisaa(luku);
+        }
+        IntJoukko joukko3 = IntJoukko.erotus(joukko, joukko2);
+        assertEquals(5, joukko3.mahtavuus());
     }
     
     @Test

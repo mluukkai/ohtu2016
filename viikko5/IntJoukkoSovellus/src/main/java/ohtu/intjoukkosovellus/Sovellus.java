@@ -14,16 +14,12 @@ public class Sovellus {
 
     private static IntJoukko mikaJoukko() {
         String luettu;
-        Scanner lukija = new Scanner(System.in);
         luettu = luku();
         while (true) {
-            if (luettu.equals("A") || luettu.equals("a")) {
-                return A;
-            } else if (luettu.equals("B") || luettu.equals("b")) {
-                return B;
-            } else if (luettu.equals("C") || luettu.equals("c")) {
-                return C;
-            } else {
+            if (luettu.equals("A") || luettu.equals("a")) return A;
+            else if (luettu.equals("B") || luettu.equals("b")) return B;
+            else if (luettu.equals("C") || luettu.equals("c")) return C;
+            else {
                 System.out.println("Virheellinen joukko! " + luettu);
                 System.out.print("Yritä uudelleen!");
                 luettu = luku();
@@ -32,60 +28,49 @@ public class Sovellus {
     }
 
     private static void lisaa() {
-        int lisLuku;
         IntJoukko joukko;
         Scanner lukija = new Scanner(System.in);
         System.out.print("Mihin joukkoon? ");
         joukko = mikaJoukko();
         System.out.println("");
         System.out.print("Mikä luku lisätään? ");
-        lisLuku = lukija.nextInt();
-        joukko.lisaa(lisLuku);
-        return;
-
+        joukko.lisaa(lukija.nextInt());
     }
 
     private static void yhdiste() {
-        IntJoukko aJoukko, bJoukko, c;
+        IntJoukko aJoukko, bJoukko;
         System.out.print("1. joukko? ");
         aJoukko = mikaJoukko();
         System.out.print("2. joukko? ");
         bJoukko = mikaJoukko();
-        c = IntJoukko.yhdiste(aJoukko, bJoukko);
-        System.out.println("A yhdiste B = " + c.toString());
-        return;
+        System.out.println("A yhdiste B = " + IntJoukko.yhdiste(aJoukko, bJoukko).toString());
     }
 
     private static void leikkaus() {
-        IntJoukko aJoukko, bJoukko, c;
+        IntJoukko aJoukko, bJoukko;
         System.out.print("1. joukko? ");
         aJoukko = mikaJoukko();
         System.out.print("2. joukko? ");
         bJoukko = mikaJoukko();
-        c = IntJoukko.leikkaus(aJoukko, bJoukko);
-        System.out.println("A leikkaus B = " + c.toString());
-        return;
+        System.out.println("A leikkaus B = " + IntJoukko.leikkaus(aJoukko, bJoukko).toString());
     }
 
     private static void erotus() {
-        IntJoukko aJoukko, bJoukko, c;
+        IntJoukko aJoukko, bJoukko;
         System.out.print("1. joukko? ");
         aJoukko = mikaJoukko();
         System.out.print("2. joukko? ");
         bJoukko = mikaJoukko();
-        c = IntJoukko.erotus(aJoukko, bJoukko);
-        System.out.println("A erotus B = " + c.toString());
+        System.out.println("A erotus B = " + IntJoukko.erotus(aJoukko, bJoukko).toString());
     }
 
     private static void poista() {
         IntJoukko joukko;
-        int lisLuku;
         Scanner lukija = new Scanner(System.in);
         System.out.print("Mistä joukosta? ");
         joukko = mikaJoukko();
         System.out.print("Mikä luku poistetaan? ");
-        lisLuku = lukija.nextInt();
-        joukko.poista(lisLuku);
+        joukko.poista(lukija.nextInt());
     }
 
     private static void kuuluu() {
@@ -118,25 +103,16 @@ public class Sovellus {
         Scanner lukija = new Scanner(System.in);
         while (true) {
             luettu = lukija.nextLine();
-            if (luettu.equals("lisää") || luettu.equals("li")) {
-                lisaa();
-            } else if (luettu.equalsIgnoreCase("poista") || luettu.equalsIgnoreCase("p")) {
-                poista();
-            } else if (luettu.equalsIgnoreCase("kuuluu") || luettu.equalsIgnoreCase("k")) {
-                kuuluu();
-            } else if (luettu.equalsIgnoreCase("yhdiste") || luettu.equalsIgnoreCase("y")) {
-                yhdiste();
-            } else if (luettu.equalsIgnoreCase("leikkaus") || luettu.equalsIgnoreCase("le")) {
-                leikkaus();
-            } else if (luettu.equalsIgnoreCase("erotus") || luettu.equalsIgnoreCase("e")) {
-                erotus();
-            } else if (luettu.equalsIgnoreCase("A")) {
-                System.out.println(A);
-            } else if (luettu.equalsIgnoreCase("B")) {
-                System.out.println(B);
-            } else if (luettu.equalsIgnoreCase("C")) {
-                System.out.println(C);
-            } else if (luettu.equalsIgnoreCase("lopeta") || luettu.equalsIgnoreCase("quit") || luettu.equalsIgnoreCase("q")) {
+            if (luettu.equals("lisää") || luettu.equals("li")) lisaa();
+            else if (luettu.equalsIgnoreCase("poista") || luettu.equalsIgnoreCase("p")) poista();
+            else if (luettu.equalsIgnoreCase("kuuluu") || luettu.equalsIgnoreCase("k")) kuuluu();
+            else if (luettu.equalsIgnoreCase("yhdiste") || luettu.equalsIgnoreCase("y")) yhdiste();
+            else if (luettu.equalsIgnoreCase("leikkaus") || luettu.equalsIgnoreCase("le")) leikkaus();
+            else if (luettu.equalsIgnoreCase("erotus") || luettu.equalsIgnoreCase("e")) erotus();
+            else if (luettu.equalsIgnoreCase("A")) System.out.println(A);
+            else if (luettu.equalsIgnoreCase("B")) System.out.println(B);
+            else if (luettu.equalsIgnoreCase("C")) System.out.println(C);
+            else if (luettu.equalsIgnoreCase("lopeta") || luettu.equalsIgnoreCase("quit") || luettu.equalsIgnoreCase("q")) {
                 System.out.println("Lopetetaan, moikka!");
                 break;
             } else {
