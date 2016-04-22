@@ -75,7 +75,6 @@ public class Sovellus {
         bJoukko = mikaJoukko();
         c = IntJoukko.erotus(aJoukko, bJoukko);
         System.out.println("A erotus B = " + c.toString());
-        return;
     }
 
     private static void poista() {
@@ -87,7 +86,6 @@ public class Sovellus {
         System.out.print("Mikä luku poistetaan? ");
         lisLuku = lukija.nextInt();
         joukko.poista(lisLuku);
-        return;
     }
 
     private static void kuuluu() {
@@ -104,7 +102,6 @@ public class Sovellus {
         } else {
             System.out.println(kysLuku + " ei kuulu joukkoon ");
         }
-        return;
     }
 
     public static void main(String[] args) {
