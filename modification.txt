@@ -1,0 +1,2 @@
+Here is a conflicting change.
+Here is some text.
