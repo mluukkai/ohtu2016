@@ -84,6 +84,4 @@ public class TennisGameTest {
         TennisGame game = new TennisGame("player1", "player2");
         checkAllScores(game);
     }
-
-
 }
