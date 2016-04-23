@@ -44,6 +44,12 @@ public class IntJoukkoTest {
     }
     
     @Test
+    public void poistetaanPuuttuvaLuku() {  
+        assertFalse(joukko.poista(99));
+    }
+    
+    
+    @Test
     public void palautetaanOikeaTaulukko() {
         int[] odotettu = {3, 55, 99};
         
@@ -95,5 +101,14 @@ public class IntJoukkoTest {
         assertFalse(joukko.kuuluu(3));        
     }
     
+    @Test
+    public void etsiOlematonLuku() {
+        assertEquals(-1, joukko.etsiLuku(456));
+    }
+    
+    @Test
+    public void etsiLoytyvaLuku() {
+        assertEquals(0, joukko.etsiLuku(10));
+    }
     
 }
