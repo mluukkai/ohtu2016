@@ -87,4 +87,13 @@ public class IntJoukkoTest {
         joukko = new IntJoukko();
         assertEquals("{}", joukko.toString());
     }     
+    
+    
+    @Test
+    public void kuuluuToimiiTyhjallaJoukolla() {
+        joukko = new IntJoukko();
+        assertFalse(joukko.kuuluu(3));        
+    }
+    
+    
 }
