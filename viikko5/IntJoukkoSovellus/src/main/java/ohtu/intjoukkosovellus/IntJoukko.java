@@ -58,13 +58,8 @@ public class IntJoukko {
 
     public boolean kuuluu(int luku) {
 
-        for (int i = 0; i < alkioidenLkm; i++) {
-            if (luku == ljono[i]) {
-                return true;
-            }
-        }
+        return (etsiLuku(luku) != -1 ? true : false);
 
-        return false;
     }
 
     public boolean poista(int luku) {
@@ -96,7 +91,7 @@ public class IntJoukko {
     }
 
     // antaa etsityn luvun sijainnin joukossa, jos ei löydy niin -1
-    private int etsiLuku(int luku) {
+    public int etsiLuku(int luku) {
 
         for (int i = 0; i < alkioidenLkm; i++) {
 
