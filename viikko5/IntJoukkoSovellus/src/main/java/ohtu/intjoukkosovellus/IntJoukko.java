@@ -172,17 +172,15 @@ public class IntJoukko {
 
     }
 
+    // joukko, joka sisältää ne a:n luvut, joita ei löydy b:stä
     public static IntJoukko erotus(IntJoukko a, IntJoukko b) {
         IntJoukko z = new IntJoukko();
-        int[] aTaulu = a.toIntArray();
-        int[] bTaulu = b.toIntArray();
-        for (int i = 0; i < aTaulu.length; i++) {
-            z.lisaa(aTaulu[i]);
+        
+        // luupataan läpi ja katsotaan että löytyykö myös b:stä
+        for (int i = 0; i < a.mahtavuus(); i++) {
+            if (!b.kuuluu(a.annaLuku(i))) z.lisaa(a.annaLuku(i));
         }
-        for (int i = 0; i < bTaulu.length; i++) {
-            z.poista(i);
-        }
-
+        
         return z;
     }
 
