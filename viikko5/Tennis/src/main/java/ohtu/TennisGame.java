@@ -1,7 +1,7 @@
 package ohtu;
 
 public class TennisGame {
-    
+
     private int m_score1 = 0;
     private int m_score2 = 0;
     private String player1Name;
@@ -13,68 +13,43 @@ public class TennisGame {
     }
 
     public void wonPoint(String playerName) {
-        if (playerName == "player1")
+        if (playerName.compareTo(player1Name) == 0) {
             m_score1 += 1;
-        else
+        } else if (playerName.compareTo(player2Name) == 0) {
             m_score2 += 1;
+        }
     }
 
     public String getScore() {
-        String score = "";
-        int tempScore=0;
-        if (m_score1==m_score2)
-        {
-            switch (m_score1)
-            {
-                case 0:
-                        score = "Love-All";
-                    break;
-                case 1:
-                        score = "Fifteen-All";
-                    break;
-                case 2:
-                        score = "Thirty-All";
-                    break;
-                case 3:
-                        score = "Forty-All";
-                    break;
-                default:
-                        score = "Deuce";
-                    break;
-                
+        if (m_score1 == m_score2) {
+            if (m_score1 > 3)
+                return "Deuce";
+            else
+                return translateToTennis(m_score1) + "-All";
+        } else if (m_score1 >= 4 || m_score2 >= 4) {
+            String edellaOlevaPelaaja = (m_score1 > m_score2 ? player1Name : player2Name);
+            int pisteEtu = (m_score1 > m_score2 ? m_score1 - m_score2 : m_score2 - m_score1);
+            
+            if (pisteEtu == 1 ) {
+                return "Advantage " + edellaOlevaPelaaja;
+            } else if (pisteEtu >= 2) {
+                return "Win for " + edellaOlevaPelaaja;
             }
+        } else
+            return translateToTennis(m_score1) + "-" + translateToTennis(m_score2);
+        throw new IllegalStateException("Score could not be displayed, the world is ending, frogs are raining, Cthulhu is waking from its slumber!!");
+    }
+
+    public String translateToTennis(int points) {
+        switch (points) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+            default:
+                return "Forty";
         }
-        else if (m_score1>=4 || m_score2>=4)
-        {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
-        }
-        else
-        {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
-        }
-        return score;
     }
 }
