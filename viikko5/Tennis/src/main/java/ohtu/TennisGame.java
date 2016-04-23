@@ -14,9 +14,9 @@ public class TennisGame {
 
     public void wonPoint(String playerName) {
         if (playerName == "player1")
-            m_score1 += 1;
+            m_score1++;
         else
-            m_score2 += 1;
+            m_score2++;
     }
 
     public String getScore() {
@@ -44,6 +44,8 @@ public class TennisGame {
                 
             }
         }
+        
+        
         else if (m_score1>=4 || m_score2>=4)
         {
             int minusResult = m_score1-m_score2;
@@ -52,6 +54,7 @@ public class TennisGame {
             else if (minusResult>=2) score = "Win for player1";
             else score ="Win for player2";
         }
+        
         else
         {
             for (int i=1; i<3; i++)
