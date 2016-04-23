@@ -114,6 +114,12 @@ public class IntJoukko {
     public int mahtavuus() {
         return alkioidenLkm;
     }
+    
+    // apumetodi, joka palauttaa tietyssä indeksissä olevan
+    // arvon
+    private int annaLuku(int indeksi) {
+        return ljono[indeksi];
+    }
 
     @Override
     public String toString() {
@@ -137,15 +143,17 @@ public class IntJoukko {
         return taulu;
     }
 
+    // yhdistetään kaksi joukkoa luomalla yksi uusi joukko ja
+    // lisäämällä siihen kahden aiemman joukon alkiot. lisäysmetodi
+    // huolehtii siitä että ei tule tuplia.
     public static IntJoukko yhdiste(IntJoukko a, IntJoukko b) {
         IntJoukko x = new IntJoukko();
-        int[] aTaulu = a.toIntArray();
-        int[] bTaulu = b.toIntArray();
-        for (int i = 0; i < aTaulu.length; i++) {
-            x.lisaa(aTaulu[i]);
+
+        for (int i = 0; i < a.mahtavuus(); i++) {
+            x.lisaa(a.annaLuku(i));
         }
-        for (int i = 0; i < bTaulu.length; i++) {
-            x.lisaa(bTaulu[i]);
+        for (int i = 0; i < b.mahtavuus(); i++) {
+            x.lisaa(b.annaLuku(i));
         }
         return x;
     }
