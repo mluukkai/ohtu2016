@@ -4,8 +4,8 @@ public class TennisGame {
     
     private int m_score1 = 0;
     private int m_score2 = 0;
-    private String player1Name;
-    private String player2Name;
+    final private String player1Name;
+    final private String player2Name;
 
     public TennisGame(String player1Name, String player2Name) {
         this.player1Name = player1Name;
@@ -13,68 +13,52 @@ public class TennisGame {
     }
 
     public void wonPoint(String playerName) {
-        if (playerName == "player1")
+        if (playerName.equals(this.player1Name))
             m_score1 += 1;
-        else
+        else if (playerName.equals(this.player2Name))
             m_score2 += 1;
+        else
+            throw new IllegalArgumentException("Unknown player " + playerName);
     }
 
     public String getScore() {
-        String score = "";
-        int tempScore=0;
-        if (m_score1==m_score2)
-        {
-            switch (m_score1)
-            {
-                case 0:
-                        score = "Love-All";
-                    break;
-                case 1:
-                        score = "Fifteen-All";
-                    break;
-                case 2:
-                        score = "Thirty-All";
-                    break;
-                case 3:
-                        score = "Forty-All";
-                    break;
-                default:
-                        score = "Deuce";
-                    break;
-                
-            }
-        }
-        else if (m_score1>=4 || m_score2>=4)
-        {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
-        }
+        if (m_score1 == m_score2)
+            return this.getTiedScore();
+        else if (m_score1 >= 4 || m_score2 >= 4)
+            return this.getAdvantageScore();
         else
-        {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
+            return this.getStandardScore();
+    }
+    
+    String getTiedScore() {
+        if (m_score1 < 4)
+            return scoreToString(m_score1) + "-All";
+        else
+            return "Deuce";
+    }
+    
+    String getAdvantageScore() {
+        int minusResult = m_score1 - m_score2;
+        if (minusResult == 1)
+            return "Advantage " + this.player1Name;
+        else if(minusResult == -1)
+            return "Advantage " + this.player2Name;
+        else
+            return "Win for " + (minusResult >= 2 ? this.player1Name : this.player2Name);
+    }
+    
+    String getStandardScore() {
+        return scoreToString(m_score1) + "-" + scoreToString(m_score2);
+    }
+    
+    String scoreToString(int score) {
+        switch(score) {
+            case 0: return "Love";
+            case 1: return "Fifteen";
+            case 2: return "Thirty";
+            case 3: return "Forty";
+            default:
+                throw new IllegalArgumentException("Cannot convert " + score + " to score string.");
         }
-        return score;
     }
 }
