@@ -47,9 +47,7 @@ public class IntJoukko {
             // jos tämänhetkinen taulukko on täynnä, luodaan
             // uusi
             if (alkioidenLkm % ljono.length == 0) {
-                // int[] taulukkoOld = new int[ljono.length];
                 int[] taulukkoOld = ljono.clone();
-                // kopioiTaulukko(ljono, taulukkoOld);
                 ljono = new int[alkioidenLkm + kasvatuskoko];
                 kopioiTaulukko(taulukkoOld, ljono);
             }
@@ -70,32 +68,46 @@ public class IntJoukko {
     }
 
     public boolean poista(int luku) {
-        int kohta = -1;
-        int apu;
-        for (int i = 0; i < alkioidenLkm; i++) {
-            if (luku == ljono[i]) {
-                kohta = i; //siis luku löytyy tuosta kohdasta :D
-                ljono[kohta] = 0;
-                break;
-            }
-        }
-        if (kohta != -1) {
-            for (int j = kohta; j < alkioidenLkm - 1; j++) {
-                apu = ljono[j];
-                ljono[j] = ljono[j + 1];
-                ljono[j + 1] = apu;
-            }
-            alkioidenLkm--;
-            return true;
+
+        // jos lukua ei löydy ollenkaan, lopetetaan siihen paikkaan
+        if (!kuuluu(luku)) {
+            return false;
         }
 
-        return false;
+        // siirretään muita lukuja 
+        int apu;
+
+        for (int j = etsiLuku(luku); j < alkioidenLkm - 1; j++) {
+            apu = ljono[j];
+            ljono[j] = ljono[j + 1];
+            ljono[j + 1] = apu;
+        }
+
+        // tilastot kuntoon ja paluuarvo
+        alkioidenLkm--;
+        return true;
+
     }
 
     private void kopioiTaulukko(int[] vanha, int[] uusi) {
         for (int i = 0; i < vanha.length; i++) {
             uusi[i] = vanha[i];
         }
+    }
+
+    // antaa etsityn luvun sijainnin joukossa, jos ei löydy niin -1
+    private int etsiLuku(int luku) {
+
+        for (int i = 0; i < alkioidenLkm; i++) {
+
+            // paikallistettu kohta, josta luku löytyy
+            if (luku == ljono[i]) {
+                return i;
+            }
+        }
+        
+        // ei löytynyt mitään
+        return -1;
 
     }
 
