@@ -98,7 +98,10 @@ public class IntJoukko {
     }
 
     private void kopioiTaulukko(int[] vanha, int[] uusi) {
-        uusi = vanha.clone();
+        for (int i = 0; i < vanha.length; i++) {
+            uusi[i] = vanha[i];
+        }
+
     }
 
     public int mahtavuus() {
