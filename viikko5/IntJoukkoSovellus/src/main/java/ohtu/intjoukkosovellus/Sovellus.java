@@ -1,5 +1,6 @@
 package ohtu.intjoukkosovellus;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sovellus {
@@ -98,7 +99,7 @@ public class Sovellus {
         joukko = mikaJoukko();
         System.out.print("Mikä luku? ");
         kysLuku = lukija.nextInt();
-        boolean kuuluuko = joukko.kuuluu(kysLuku);
+        boolean kuuluuko = joukko.sisaltyykoJoukkoon(kysLuku);
         if (kuuluuko) {
             System.out.println(kysLuku + " kuuluu joukkoon ");
         } else {
@@ -115,6 +116,7 @@ public class Sovellus {
 
         System.out.println("Tervetuloa joukkolaboratorioon!");
         System.out.println("Käytössäsi ovat joukot A, B ja C.");
+        System.out.println(Arrays.toString(A.getTaulu())+" "+Arrays.toString(B.getTaulu())+" "+Arrays.toString(C.getTaulu()));
         System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e), leikkaus(le) ja lopetus(quit)(q).");
         System.out.println("Joukon nimi komentona tarkoittaa pyyntöä tulostaa joukko.");
 
@@ -144,8 +146,10 @@ public class Sovellus {
                 break;
             } else {
                 System.out.println("Virheellinen komento! " + luettu);
+                System.out.println(Arrays.toString(A.getTaulu())+" "+Arrays.toString(B.getTaulu())+" "+Arrays.toString(C.getTaulu()));
                 System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e) ja leikkaus(le).");
             }
+            System.out.println(Arrays.toString(A.getTaulu())+" "+Arrays.toString(B.getTaulu())+" "+Arrays.toString(C.getTaulu()));
             System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e) ja leikkaus(le).");
         }
     }
