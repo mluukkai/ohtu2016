@@ -9,12 +9,16 @@ public class Kassapaate {
     }
     
     public void lataa(Lyyrakortti kortti, int summa){
+        if (summa>0) {
         kortti.lataa(summa);
+        }
     }
     
     public void ostaLounas(Lyyrakortti kortti) {
+        if (kortti.getSaldo()>=HINTA) {
         kortti.osta(HINTA);
         myytyjaLounaita++;
+        }
     }
 
     public int getMyytyjaLounaita() {
