@@ -5,7 +5,7 @@ public class IntJoukko {
     public final static int KAPASITEETTI = 5, // aloitustalukon koko
             OLETUSKASVATUS = 5;  // luotava uusi taulukko on 
     // näin paljon isompi kuin vanha
-    
+
     private int kasvatuskoko;     // Uusi taulukko on tämän verran vanhaa suurempi.
     private int[] ljono;      // Joukon luvut säilytetään taulukon alkupäässä. 
     private int alkioidenLkm;    // Tyhjässä joukossa alkioiden_määrä on nolla. 
@@ -37,24 +37,19 @@ public class IntJoukko {
             ljono[i] = 0;
         }
     }
-    
-    
+
     public boolean lisaa(int luku) {
 
-        int eiOle = 0;
-        if (alkioidenLkm == 0) {
-            ljono[0] = luku;
-            alkioidenLkm++;
-            return true;
-        } else {
-        }
         if (!kuuluu(luku)) {
             ljono[alkioidenLkm] = luku;
             alkioidenLkm++;
+
+            // jos tämänhetkinen taulukko on täynnä, luodaan
+            // uusi
             if (alkioidenLkm % ljono.length == 0) {
-                int[] taulukkoOld = new int[ljono.length];
-                taulukkoOld = ljono;
-                kopioiTaulukko(ljono, taulukkoOld);
+                // int[] taulukkoOld = new int[ljono.length];
+                int[] taulukkoOld = ljono.clone();
+                // kopioiTaulukko(ljono, taulukkoOld);
                 ljono = new int[alkioidenLkm + kasvatuskoko];
                 kopioiTaulukko(taulukkoOld, ljono);
             }
@@ -64,7 +59,7 @@ public class IntJoukko {
     }
 
     public boolean kuuluu(int luku) {
-        
+
         for (int i = 0; i < alkioidenLkm; i++) {
             if (luku == ljono[i]) {
                 return true;
