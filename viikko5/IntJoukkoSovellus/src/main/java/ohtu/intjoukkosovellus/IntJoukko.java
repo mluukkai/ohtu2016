@@ -105,7 +105,7 @@ public class IntJoukko {
                 return i;
             }
         }
-        
+
         // ei löytynyt mitään
         return -1;
 
@@ -114,7 +114,7 @@ public class IntJoukko {
     public int mahtavuus() {
         return alkioidenLkm;
     }
-    
+
     // apumetodi, joka palauttaa tietyssä indeksissä olevan
     // arvon
     private int annaLuku(int indeksi) {
@@ -158,17 +158,16 @@ public class IntJoukko {
         return x;
     }
 
+    // tehdään joukko, joka sisältää sekä a:sta että b:stä löytyvät luvut
     public static IntJoukko leikkaus(IntJoukko a, IntJoukko b) {
+
         IntJoukko y = new IntJoukko();
-        int[] aTaulu = a.toIntArray();
-        int[] bTaulu = b.toIntArray();
-        for (int i = 0; i < aTaulu.length; i++) {
-            for (int j = 0; j < bTaulu.length; j++) {
-                if (aTaulu[i] == bTaulu[j]) {
-                    y.lisaa(bTaulu[j]);
-                }
-            }
+        
+        // luupataan läpi ja katsotaan että löytyykö myös b:stä
+        for (int i = 0; i < a.mahtavuus(); i++) {
+            if (b.kuuluu(a.annaLuku(i))) y.lisaa(a.annaLuku(i));
         }
+        
         return y;
 
     }
