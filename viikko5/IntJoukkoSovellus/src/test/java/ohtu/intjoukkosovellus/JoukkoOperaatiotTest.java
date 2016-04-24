@@ -14,7 +14,7 @@ public class JoukkoOperaatiotTest {
         IntJoukko eka = teeJoukko(1,2);
         IntJoukko toka = teeJoukko(3,4);
         
-        IntJoukko tulos = IntJoukko.yhdiste(eka, toka);
+        IntJoukko tulos = IntJoukko.teeJoukoille("yhdiste", eka, toka);
         int[] vastauksenLuvut = tulos.toIntArray();
         Arrays.sort(vastauksenLuvut);
         
