@@ -7,6 +7,7 @@ public abstract class Komento {
     protected Sovelluslogiikka sovellus;
     protected JTextField tuloskentta;
     protected JTextField syotekentta;
+    protected int viimeisinArvo;
 
     public Komento(Sovelluslogiikka sovellus, JTextField tuloskentta, JTextField syotekentta) {
         this.sovellus = sovellus;
@@ -21,6 +22,8 @@ public abstract class Komento {
             arvo = Integer.parseInt(syotekentta.getText());
         } catch (Exception e) {
         }
+        
+        viimeisinArvo = arvo;
         
         return arvo;
     }

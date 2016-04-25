@@ -10,13 +10,15 @@ public class Nollaa extends Komento {
 
     @Override
     protected void suorita() {
+        viimeisinArvo = this.getArvo();
         sovellus.nollaa();
         this.setTulos();
     }
 
     @Override
     protected void peru() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sovellus.aseta(viimeisinArvo);
+        this.setTulos();
     }
     
 }
