@@ -8,8 +8,10 @@ public class HasFewerThan implements Matcher {
     
     private int value;
     private String fieldName;
+    private Matcher matcher;
 
-    public HasFewerThan(int value, String category) {
+    public HasFewerThan(Matcher matcher, int value, String category) {
+        this.matcher = matcher;
         this.value = value;
         fieldName = "get"+Character.toUpperCase(category.charAt(0))+category.substring(1, category.length());
     }
@@ -19,6 +21,9 @@ public class HasFewerThan implements Matcher {
         try {                                    
             Method method = p.getClass().getMethod(fieldName);
             int playersValue = (Integer)method.invoke(p);
+            
+            System.out.println("HasFewerThan: " + (playersValue < value));
+            
             return playersValue < value;
             
         } catch (Exception ex) {
