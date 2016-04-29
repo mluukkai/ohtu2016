@@ -1,0 +1,3 @@
+Tämä on keskeneräinen tiedosto, jota en vielä halua commitoida
+...
+Nyt tiedosto on valmis ja mielellänni suoritan commitin
