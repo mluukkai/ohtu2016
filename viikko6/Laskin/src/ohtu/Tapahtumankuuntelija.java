@@ -1,7 +1,9 @@
 package ohtu;
 
+import Operaatiot.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JTextField;
  
@@ -13,7 +15,9 @@ public class Tapahtumankuuntelija implements ActionListener {
     private JTextField tuloskentta;
     private JTextField syotekentta;
     private Sovelluslogiikka sovellus;
- 
+    private HashMap<JButton, Komento> komennot;
+    Komento edellinen;
+    
     public Tapahtumankuuntelija(JButton plus, JButton miinus, JButton nollaa, JButton undo, JTextField tuloskentta, JTextField syotekentta) {
         this.plus = plus;
         this.miinus = miinus;
@@ -22,6 +26,10 @@ public class Tapahtumankuuntelija implements ActionListener {
         this.tuloskentta = tuloskentta;
         this.syotekentta = syotekentta;
         this.sovellus = new Sovelluslogiikka();
+        komennot = new HashMap<>();
+        komennot.put(plus, new Plus(sovellus, tuloskentta, syotekentta));
+        komennot.put(miinus, new Miinus(sovellus, tuloskentta, syotekentta));
+        komennot.put(nollaa, new Nollaa(sovellus, tuloskentta, syotekentta));
     }
     
     @Override
@@ -32,17 +40,21 @@ public class Tapahtumankuuntelija implements ActionListener {
             arvo = Integer.parseInt(syotekentta.getText());
         } catch (Exception e) {
         }
- 
-        if (ae.getSource() == plus) {
-            sovellus.plus(arvo);
-        } else if (ae.getSource() == miinus) {
-            sovellus.miinus(arvo);
-        } else if (ae.getSource() == nollaa) {
-            sovellus.nollaa();
-        } else {
-            System.out.println("undo pressed");
+        Komento komento;
+        komento = komennot.get(ae.getSource());
+        if (komento == null) {
+            if (edellinen != null) {
+                edellinen.peru();
+            }
+            edellinen = null;
+            undo.setEnabled(false);
         }
-        
+        else {
+            komento.suorita();
+            undo.setEnabled(true);
+        }
+        edellinen = komento;
+                
         int laskunTulos = sovellus.tulos();
          
         syotekentta.setText("");
@@ -52,7 +64,5 @@ public class Tapahtumankuuntelija implements ActionListener {
         } else {
             nollaa.setEnabled(true);
         }
-        undo.setEnabled(true);
     }
- 
 }
