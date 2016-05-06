@@ -2,12 +2,12 @@ package ohtu.kivipaperisakset;
 
 import java.util.Scanner;
 
-public class KPSTekoaly {
+public class KPSTekoaly extends KiviPaperiSakset {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public void pelaa() {
-        Tuomari tuomari = new Tuomari();
+    @Override
+    public String[] pelaa() {
         Tekoaly tekoaly = new Tekoaly();
 
         System.out.print("Ensimmäisen pelaajan siirto: ");
@@ -17,27 +17,17 @@ public class KPSTekoaly {
         tokanSiirto = tekoaly.annaSiirto();
         System.out.println("Tietokone valitsi: " + tokanSiirto);
 
-
-        while (onkoOkSiirto(ekanSiirto) && onkoOkSiirto(tokanSiirto)) {
-            tuomari.kirjaaSiirto(ekanSiirto, tokanSiirto);
-            System.out.println(tuomari);
-            System.out.println();
-
-            System.out.print("Ensimmäisen pelaajan siirto: ");
-            ekanSiirto = scanner.nextLine();
-
-            tokanSiirto = tekoaly.annaSiirto();
-            System.out.println("Tietokone valitsi: " + tokanSiirto);
-            tekoaly.asetaSiirto(ekanSiirto);
-
-        }
-
-        System.out.println();
-        System.out.println("Kiitos!");
-        System.out.println(tuomari);
+        
+        return null;
     }
 
     private static boolean onkoOkSiirto(String siirto) {
         return "k".equals(siirto) || "p".equals(siirto) || "s".equals(siirto);
     }
+
+    @Override
+    void printWinner() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
