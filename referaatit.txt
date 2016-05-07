@@ -1,0 +1,14 @@
+# REFERAATTI TVÄ 4
+Ohjelmistotuotantoa on tapahtunut jo tieteenalan syntyhetkistä lähtien. Tavat
+tehdä ohjelmistotuotantoa ovat kuitenkin muuttuneet muuttuneen toimintaympäristön,
+ohjelmistotuotannon tutkimuksen kehittymisen sekä tietokoneiden tehojen lisääntymi-
+sen myötä. Ohjelmistokehitys oli pitkään sidoksissa vesiputousmallin kaltaiseen
+prosessikehikkoon, jonka suurimpana ongelmana on heikko kyky adaptoitua jat-
+kuvasti muuttuvaan toimintaympäristöön sekä suunnitteluvaiheessa tehtyjen
+virheiden korjaamiseen. Nykyaikana käytetyt iteratiiviset menetelmät alkoivat
+kuitenkin nostaa osakkeitaan. Iteratiivisista menetelmistä ensimmäisiä olivat spi-
+raalimalli sekä RUP-prosessi, joiden tarkoituksena oli hajauttaa ohjelmisto-
+tuotantoon liittyviä vaiheita koko ohjelmistotuotantoprosessin elinkaarelle.
+Vuosituhannen vaihteessa alkoivat yleistymään modernit, ketterät ohjelmistotuo-
+tantokehykset, jotka painottivat vahvasti tiimin itseohjautuvuuteen ja tiivii-
+seen yhteistyöhön asiakastahojen kanssa.
