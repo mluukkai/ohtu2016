@@ -42,6 +42,7 @@ public class KPS {
         ekanSiirto = scanner.nextLine();
         System.out.print(kysely);
         tokanSiirto = toinenVastaus();
+        tekoaly.asetaSiirto(ekanSiirto);
         if (!jatkuu(ekanSiirto, tokanSiirto)) return false;
         tuomari.kirjaaSiirto(ekanSiirto, tokanSiirto);
         System.out.println(tuomari);

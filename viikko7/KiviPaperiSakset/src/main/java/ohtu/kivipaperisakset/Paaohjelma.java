@@ -16,6 +16,7 @@ public class Paaohjelma {
                     + "\nmuilla valinnoilla lopetataan");
             
             String vastaus = scanner.nextLine();
+            if(!(vastaus.equals("a") || vastaus.equals("b") || vastaus.equals("c"))) return;
             System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
             peli.pelaa(vastaus);
         }
