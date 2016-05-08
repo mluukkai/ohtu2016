@@ -8,6 +8,7 @@ public class KPSTekoaly {
     private static final Scanner scanner = new Scanner(System.in);
 
     public boolean vaikea = false;
+    public boolean pvp = false;
     
     public void pelaa() {
         Tuomari tuomari = new Tuomari();
@@ -23,9 +24,13 @@ public class KPSTekoaly {
         String ekanSiirto = scanner.nextLine();
         String tokanSiirto;
 
-        tokanSiirto = tekoaly.annaSiirto();
-        System.out.println("Tietokone valitsi: " + tokanSiirto);
-
+        if (!pvp) {
+            tokanSiirto = tekoaly.annaSiirto();
+            System.out.println("Tietokone valitsi: " + tokanSiirto);
+        } else {
+            System.out.print("Toisen pelaajan siirto: ");
+            tokanSiirto = scanner.nextLine();
+        }
 
         while (onkoOkSiirto(ekanSiirto) && onkoOkSiirto(tokanSiirto)) {
             tuomari.kirjaaSiirto(ekanSiirto, tokanSiirto);
@@ -35,9 +40,14 @@ public class KPSTekoaly {
             System.out.print("Ensimmäisen pelaajan siirto: ");
             ekanSiirto = scanner.nextLine();
 
-            tokanSiirto = tekoaly.annaSiirto();
-            System.out.println("Tietokone valitsi: " + tokanSiirto);
-            tekoaly.asetaSiirto(ekanSiirto);
+            if (!pvp) {
+                tokanSiirto = tekoaly.annaSiirto();
+                System.out.println("Tietokone valitsi: " + tokanSiirto);
+                tekoaly.asetaSiirto(ekanSiirto);
+            } else {
+                System.out.print("Toisen pelaajan siirto: ");
+                tokanSiirto = scanner.nextLine();
+            }
 
         }
 

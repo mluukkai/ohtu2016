@@ -16,21 +16,18 @@ public class Paaohjelma {
                     + "\nmuilla valinnoilla lopetataan");
 
             String vastaus = scanner.nextLine();
-            
+            System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
+
             
             // Valitaan pelitila ylemmän kysymyksen vastauksen perusteella
             switch(vastaus) {
-                case "a":  
-                            System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                            KPS.createPvP();
+                case "a":   KPS.createPvP().pelaa();
                             break;
-                case "b":
-                            System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                            KPS.createPvAI().pelaa();
+                            
+                case "b":   KPS.createPvAI().pelaa();
                             break;
-                case "c":
-                            System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                            KPS.createPvAImproved().pelaa();
+                    
+                case "c":   KPS.createPvAImproved().pelaa();
                             break;
                     
                 default :   break;

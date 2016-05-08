@@ -10,17 +10,21 @@ package ohtu.kivipaperisakset;
  * @author jkostet
  */
 public abstract class KPS {
+    private static KPSTekoaly t = new KPSTekoaly();
+    
     public static KPSTekoaly createPvAI() {
-        return new KPSTekoaly();
+        return t;
     }
     
     public static KPSTekoaly createPvAImproved() {
-        KPSTekoaly t = new KPSTekoaly();
         t.vaikea = true;
         return t;
     }
     
-    public static KPSPelaajaVsPelaaja createPvP() {
-        return new KPSPelaajaVsPelaaja();
+    public static KPSTekoaly createPvP() {
+        t.pvp = true;
+        return t;
     }
+    
+    
 }
