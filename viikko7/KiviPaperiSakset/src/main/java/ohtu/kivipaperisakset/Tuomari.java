@@ -13,41 +13,25 @@ public class Tuomari {
         this.tasapelit = 0;
     }
 
-    public void kirjaaSiirto(String ekanSiirto, String tokanSiirto) {
-        if (tasapeli(ekanSiirto, tokanSiirto)) {
+    public String kirjaaSiirto(Komento ekanSiirto, Komento tokanSiirto) {
+    //    System.out.println("1:"+ekanSiirto.merkki()+" vs 2:"+tokanSiirto.merkki());
+        if (ekanSiirto.merkki()==tokanSiirto.merkki()) {
             tasapelit++;
-        } else if (ekaVoittaa(ekanSiirto, tokanSiirto)) {
+            return "PELAAJA1 ja PELAAJA2 tasapeliin!";
+        } else if (ekanSiirto.voittaa()==tokanSiirto.merkki()) {
             ekanPisteet++;
+            return "PELAAJA1 voitti!";
         } else {
             tokanPisteet++;
+            return "PELAAJA2 voitti!";
         }
     }
 
-    // sisäinen metodi, jolla tarkastetaan tuliko tasapeli
-    private static boolean tasapeli(String eka, String toka) {
-        if (eka.equals(toka)) {
-            return true;
-        }
 
-        return false;
-    }
 
-    // sisäinen metodi joka tarkastaa voittaako eka pelaaja tokan
-    private static boolean ekaVoittaa(String eka, String toka) {
-        if ("k".equals(eka) && "s".equals(toka)) {
-            return true;
-        } else if ("s".equals(eka) && "p".equals(toka)) {
-            return true;
-        } else if ("p".equals(eka) && "k".equals(toka)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public String toString() {
-        String s = "Pelitilanne: " + ekanPisteet + " - " + tokanPisteet + "\n"
-                + "Tasapelit: " + tasapelit;
+    public String tulokset() {
+        String s = "### PELI OHI ###\nLopputilanne:\nPELAAJA1: " + ekanPisteet + " - PELAAJA2: " + tokanPisteet + "\n"
+                + "Tasapelit: " + tasapelit+"\n";
         return s;
     }
 }
