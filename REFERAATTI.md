@@ -1,7 +1,8 @@
 Referaatti Eero-Veikko Laineen kandidaattityöstä 
---------------------
 "Johtaminen perinteisissä ja ketterissä ohjelmistoprojekteissa"
+--------------------
 Kirjoittanut Tuomas Honkala
+
 
 
 
