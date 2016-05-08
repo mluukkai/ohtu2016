@@ -1,14 +1,23 @@
 package ohtu.kivipaperisakset;
 
 import java.util.Scanner;
+import ohtu.kivipaperisakset.*;
 
 public class KPSTekoaly {
 
     private static final Scanner scanner = new Scanner(System.in);
 
+    public boolean vaikea = false;
+    
     public void pelaa() {
         Tuomari tuomari = new Tuomari();
-        Tekoaly tekoaly = new Tekoaly();
+        Tekoaly tekoaly;
+        
+        if (!vaikea) {
+            tekoaly = new Tekoaly();
+        } else {
+            tekoaly = new TekoalyParannettu(20);
+        }
 
         System.out.print("Ensimmäisen pelaajan siirto: ");
         String ekanSiirto = scanner.nextLine();
