@@ -1,7 +1,9 @@
 Referaatti Eero-Veikko Laineen kandidaattityöstä 
+--------------------
 "Johtaminen perinteisissä ja ketterissä ohjelmistoprojekteissa"
 Tuomas Honkala
---------------------
+
+
 
 Eero-Veikko Laine pureutuu kandidaattityössään ohjelmistoprojektien johtamisen ja projektihallinnan problematiikkaan. Ohjelmistoprojektien korkeaa epäonnistumisen riskiä pyritään yhä kasvavassa määrin kompensoimaan ketterien menetelmien tarjoamilla mahdollisuuksilla. Ketterissä menetelmissä projektitiimin yhteinen vastuu ja päätöksenteko korostuu ja hierarkkisen ylhäältä alaspäin johtamisen kustannuksella.
 
