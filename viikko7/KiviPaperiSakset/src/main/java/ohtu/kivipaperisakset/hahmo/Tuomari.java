@@ -1,4 +1,4 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.hahmo;
 
 // Tuomari pitää kirjaa ensimmäisen ja toisen pelaajan pisteistä sekä tasapelien määrästä.
 public class Tuomari {

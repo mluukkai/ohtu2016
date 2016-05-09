@@ -1,10 +1,12 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.hahmo;
 
 public class Tekoaly implements Pelaaja {
 
     int siirto;
+    private String nimi;
 
-    public Tekoaly() {
+    public Tekoaly(String nimi) {
+        this.nimi = nimi;
         siirto = 0;
     }
 
@@ -26,4 +28,16 @@ public class Tekoaly implements Pelaaja {
     public void asetaSiirto(String ekanSiirto) {
         // ei tehdä mitään 
     }
+
+    @Override
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+
+    @Override
+    public String getNimi() {
+        return this.nimi;
+    }
+
+    
 }

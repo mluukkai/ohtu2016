@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.hahmo;
 
 /**
  *
@@ -14,5 +14,8 @@ public interface Pelaaja {
 
     public String annaSiirto();
     public void asetaSiirto(String siirto);
+    
+    public void setNimi(String nimi);
+    public String getNimi();
     
 }

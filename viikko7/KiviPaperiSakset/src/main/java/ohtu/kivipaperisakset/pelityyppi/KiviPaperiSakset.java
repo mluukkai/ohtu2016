@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.pelityyppi;
+
+import ohtu.kivipaperisakset.hahmo.Pelaaja;
+import ohtu.kivipaperisakset.hahmo.Tuomari;
 
 /**
  *
@@ -15,47 +18,55 @@ public abstract class KiviPaperiSakset {
     protected Pelaaja tokaPelaaja;
     private Tuomari tuomari;
 
-    
+    public KiviPaperiSakset() {
+        luoTuomari();
+        luoEkaPelaaja();
+        luoTokaPelaaja();
+    }
+
     public void luoTuomari() {
         this.tuomari = new Tuomari();
     }
-    
+
     public abstract void luoEkaPelaaja();
+
     public abstract void luoTokaPelaaja();
 
     // TODO
     // stepit: 1 ykköspelaajan siirto, 2 kakkospelaajan siirto, 3 evaluointi
     // 4 pisteen kirjaus
-    
     public String ekanSiirto() {
         return ekaPelaaja.annaSiirto();
     }
-    
+
     public String tokanSiirto() {
         return tokaPelaaja.annaSiirto();
     }
 
     public void pelaa() {
 
+        System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
+        
         // ensimmäinen kierros
         String siirtoEka = ekanSiirto();
         String siirtoToka = tokanSiirto();
-        
+
         // päälooppi, mennään kierroksia kunnes tulee joku muu
         // syöte käyttäjältä kuin "k", "p" tai "s"
         while (onkoOkSiirto(siirtoEka) && onkoOkSiirto(siirtoToka)) {
 
-            System.out.println("Tietokone valitsi: " + siirtoToka);
+            System.out.println(ekaPelaaja.getNimi() + " valitsi: " + siirtoToka);
+            System.out.println(tokaPelaaja.getNimi() + " valitsi: " + siirtoToka);
 
             // tuomari kirjaa pisteet ja kertoo tilanteen
             tuomari.kirjaaSiirto(siirtoEka, siirtoToka);
             System.out.println(tuomari);
             System.out.println();
-            
+
             // kysytään lisää kierroksia
             siirtoEka = ekanSiirto();
             siirtoToka = tokanSiirto();
-            
+
         }
 
         // peli loppuu.
