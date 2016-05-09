@@ -12,6 +12,7 @@ package ohtu.kivipaperisakset;
  */
 public interface Pelaaja {
 
-    String annaSiirto();
+    public String annaSiirto();
+    public void asetaSiirto(String siirto);
     
 }

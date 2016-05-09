@@ -1,40 +1,32 @@
 package ohtu.kivipaperisakset;
 
-import java.util.Scanner;
-
-import java.util.Scanner;
 
 // Kivi-Paperi-Sakset, jossa voidaan valita pelataanko vastustajaa
 // vastaan vai ei
-public class KPSParempiTekoaly extends KiviPaperiSakset {
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    
+public class KPSParempiTekoaly extends KiviPaperiSakset {  
     
     @Override
-    public String[] pelaa() {
+    public void luoEkaPelaaja() {
+        this.ekaPelaaja = new Ihminen();
+    }
 
-        TekoalyParannettu tekoaly = new TekoalyParannettu(20);
+    @Override
+    public void luoTokaPelaaja() {
+        this.tokaPelaaja = new TekoalyParannettu(20);
+    }
 
-        System.out.print("Ensimmäisen pelaajan siirto: ");
-        String ekanSiirto = scanner.nextLine();
-        String tokanSiirto;
-
-
-        tokanSiirto = tekoaly.annaSiirto();
-        System.out.println("Tietokone valitsi: " + tokanSiirto);
-
-
+    @Override
+    public String ekanSiirto() {
         
-        return null;
+        // rekisteöröidään ykköspelaajan siirto "koneoppimisen" vuoksi
+        String siirto = this.ekaPelaaja.annaSiirto();        
+        this.tokaPelaaja.asetaSiirto(siirto);
+        
+        return siirto;    
     }
 
 
-    @Override
-    void printWinner() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
 
 }

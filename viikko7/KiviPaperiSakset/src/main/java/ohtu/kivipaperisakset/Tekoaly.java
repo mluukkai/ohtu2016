@@ -22,7 +22,8 @@ public class Tekoaly implements Pelaaja {
         }
     }
 
-    void asetaSiirto(String ekanSiirto) {
+    @Override
+    public void asetaSiirto(String ekanSiirto) {
         // ei tehdä mitään 
     }
 }
