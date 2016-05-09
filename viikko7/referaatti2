@@ -1,0 +1,4 @@
+Ohjelmistoarkkitehtuurin sisällyttäminen ketteriin ohjelmistotuotantomenetelmiin.
+
+Arkkitehtuuri muodostuu inkrementaalisesti kehitysjaksosta toiseen. Tarpeen vaatiessa järjestelmän rakennetta refaktoroidaan, eli sitä muutetaan yksinkertaisemmaksi ja selkeämäksi muuttamatta järjestelmän toiminnalisuutta. Ketterässä kehityksessä ei ole luonnollista tilaa ohjelmistoarkkitehtuurille. Ketterää ohjelmistokehitystä käyttävät yhtiöt ovat sopeutuneet erilaisilla käytännöillä, joilla oppikirjan mukaisia kehitystapoja on muokattu huomioimaan paremmin ohjelmisto arkkitehtuurin haasteet. Tälläisiä tapoja ovat Sprint 0, Arkkitehtuuri erillisenä prosessina, suunnittelupiikit, arkkitehtuurijaksot ja arkkitehtuuritarinat.
+

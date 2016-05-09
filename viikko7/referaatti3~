@@ -1,0 +1,3 @@
+Metriikat käytänteiden tukena ohjelmiston laadun arvioimisessa
+
+Kehitystyön ohella laadun arvioiminen ja varmistaminen on haasteellista. Ohjelmiston laatua voidaan tutkia mekaanisilla metriikoilla, joiden tehtävänänä on arvioida ohjelmiston komponentteja sekä pystyä havaitsemaan ohjelmiston kriittiset osa-alueet. Tutkimuksissa hyödyllisiksi havaittuja metriikoita ovat koodikirnu, verkkoanalyysi, testikattavuus ja mutaatiotestaus. Koodikirnulla arvioidaan ohjelmiston muutoksien vaikutusta ohjelmiston virheherkkyyteen. Verkkoanalyysilla tutkitaan ohjelmiston komponenttien riippuvuuksien vaikutusta ohjelmiston virhealttiuteen. Testikattavuudella ja mutaatiotestauksella analysoidaan ohjelmiston lähdekoodin testien tehokkuutta sekä laadukkuutta.ss
