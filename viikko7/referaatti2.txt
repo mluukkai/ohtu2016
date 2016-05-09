@@ -1,0 +1,8 @@
+Aihe: Ohjelmistoarkkitehtuurin sis‰llytt‰minen ketteriin ohjelmistotuotantomenetelmiin
+
+Tutkielmassa k‰ytiin l‰pi ketter‰n ohjelmistokehityksen merkityst‰
+ohjelmistosuunniteluun ja miten se on muuttanut suunnittelun rakennetta
+vesiputousmallista. T‰m‰ vesiputousmalli tarkoittaa sit‰ ett‰ ohjelmisto suunnitellaan
+kokonaan etuk‰teen ja l‰hdet‰‰n siit‰ toteuttamaan. Ketteriss‰ ohjelmisttuotannossa
+projektia suunnitellaan sit‰ tehd‰sse ja suunnittelu tehd‰‰n osissa.
+Ketterist‰ menetelmist‰ k‰ytiin l‰pi Srum sek‰ Extreme Programmin.

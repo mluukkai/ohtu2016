@@ -1,0 +1,10 @@
+Aihe: Ohjelmistotuotantomenetelmien kehittyminen 1950-luvulta nykypäivään
+
+Tutkielma kävi läpi ohjelmistotuotantoa 50-luvultu nykypäivään.
+Selvisi vesiputousmallin(lineaarisen ohjelmistosuunnittelun) rakenne 
+ja siitä johtuvat ongelmat.
+Esimerkiksi asiakkaan vaatimusten muuttuminen on vesiputoismallissa hankalaa,
+koska vaatimukset määritellään alussa ja projektin edetessä keskitytään enemmän ohjelmaan.
+Ketteristä menetelmistä käsiteltiin laajemmin SCUM ja sen tuomat hyödylliset
+työkalut ohjelmistokehittämiseen, kuten sprintit. Sprintti kestää 1-4viikkoa ja
+sen aikana toteutetaan asiakkaalle luvatut user storyt. 
