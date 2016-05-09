@@ -1,0 +1,11 @@
+Aihe: Johtaminen perinteisissä ja ketterissä ohjelmistoprojekteissa
+
+Tutkielmassa on paneuduttu perinteisiin ja ketteriin 
+ohjelmistotuotantoprojekteihin. Vertailussa on varsinkin
+johtamistavat ja niiden eroavuudet. Normaalissa mallissa on
+huomattavasti enemmän vastuuta yhdellä henkilöllä johtajana kun taas
+ketterissä menetelmissä vastuuta siirretään enemmän tiimille.
+SCRUM:ssa esimerkiksi scrum mastes on vastuussa tiimin johtamisesta,
+mutta tiimi tekee suurrimman osan päätöksistä yhdessä ja
+scrum master keskittyy parantamaan tiimin työskentely tehokuutta.
+Jopa asiakas on osana johtamista ketterissä menetelmissä.
