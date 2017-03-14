@@ -1,4 +1,4 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.hahmo;
 
 // Tuomari pitää kirjaa ensimmäisen ja toisen pelaajan pisteistä sekä tasapelien määrästä.
 public class Tuomari {
@@ -14,6 +14,13 @@ public class Tuomari {
     }
 
     public void kirjaaSiirto(String ekanSiirto, String tokanSiirto) {
+
+        // tarkistetaan että syötetyt arvot ovat kelvollisia merkkejä
+        if (!onKelvollinen(ekanSiirto) || !onKelvollinen(tokanSiirto)) {
+            return;
+        }
+        
+
         if (tasapeli(ekanSiirto, tokanSiirto)) {
             tasapelit++;
         } else if (ekaVoittaa(ekanSiirto, tokanSiirto)) {
@@ -49,5 +56,10 @@ public class Tuomari {
         String s = "Pelitilanne: " + ekanPisteet + " - " + tokanPisteet + "\n"
                 + "Tasapelit: " + tasapelit;
         return s;
+    }
+
+    // apumetodi, joka tarkistaa että syöte on kelvollinen, ts: "k", "p" tai "s"
+    private boolean onKelvollinen(String s) {
+        return s.matches("^(k|p|s)$");
     }
 }

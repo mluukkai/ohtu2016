@@ -7,7 +7,7 @@ import statistics.Player;
 public class HasAtLeast implements Matcher {
     
     private int value;
-    private String fieldName;
+    private String fieldName;    
 
     public HasAtLeast(int value, String category) {
         this.value = value;
@@ -18,7 +18,7 @@ public class HasAtLeast implements Matcher {
     public boolean matches(Player p) {
         try {                                    
             Method method = p.getClass().getMethod(fieldName);
-            int playersValue = (Integer)method.invoke(p);
+            int playersValue = (Integer)method.invoke(p);          
             return playersValue>=value;
             
         } catch (Exception ex) {
