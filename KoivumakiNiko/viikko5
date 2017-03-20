@@ -1,0 +1,3 @@
+Mockiton kanssa meni hetki opiskellessa. En oikein edes ymmärrä miten kauan meni hoksata, että Verifyssä pitää olla nuo eq():t sisällä, eikä sille anneta suoraan toivottuja muuttujien arvoja. Tuon pienen yksityiskohdan kanssa pyöriminen maksoi ainakin tunnin ihmettelyä.
+
+Koodin refaktorointi on kivaa puuhaa. On hauskaa raaputella päätä ja miettiä mikä pointti kullakin rivillä tai metodilla on, erityisesti kun välillä niillä ei ole yhtään mitään pointtia. Hirvittää tosin vähän ajatus katsoa omia vanhoja koulutehtäväkoodeja...

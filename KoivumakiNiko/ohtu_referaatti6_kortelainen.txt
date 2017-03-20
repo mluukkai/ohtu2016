@@ -1,0 +1,5 @@
+Artikkelissaan "Jatkuva eksperimentointi ohjelmistokehityksen tukena" Esa Kortelainen tutkii experimentoinnin tärkeyttä, sekä pohtii sen edellytyksiä ohjelmistokehityksessä. Artikkeli tekee myös pikaisen katsauksen erilaisten ketterien ohjelmistotuotantomallien historiaan, keskittyen 1940-luvun Tyotan tehtaiden Lean-malleista ponnistaisiin, 1990-luvulla ohjelmistokehityksen parin päätyneisiin toimintatapoihin.
+
+Tekstissään Kortelainen soveltaan Van der Ven ja Boschin arkkitehtuuripäätösten mallia ohjelmistokehitykseen, jossa experimentoinnin osuus on varmistaa päätöksen oikeellisuus. Kyse on siis oikein tuotteen tai pohjapiirustusten löytämisestä, joskus varsinaisen kehitystyön jo alettua. Kortelainen näkee globalisaation ja nopeiden tietoliikenneyhteysten paitsi lähentäneen käyttäjän ja ohjelmistokehittäjän välimatkaa, myös sen myötä luoneen painetta edellytykset ohjelmistojen tiukemmalle päivitystahdille.
+
+Yhteenvedossaan Kortelainen pitää tarvetta experimentoinnille kasvavana, nähden siinä lähinnä hyötyjä ja kovin vähän haittoja.

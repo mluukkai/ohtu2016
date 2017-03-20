@@ -1,0 +1,5 @@
+Kandidaatintyössään "Ohjelmistoarkkitehtuurin sisällyttäminen ketteriin ohjelmistotuotantomenetelmiin" Tero Huomo pohtii määrätietoisen suunnittelun hyödyntämistä ketterässä ohjelmistokehityksessä. Artikkeli tarkastelee sekä arkkitehtuurin asemaa ohjelmistokehityksessä, että kyseenalaistaa sen vastakkainasettelua ketterien mallien kanssa.
+
+Täydellisiä vastauksia Huomon artikkeli ei tarjoa. Tieteellisten vertailujen puute hankaloittaa menetelmien asettamista paremmuusjärjestykseen, eikä yksikään menetelmä ole ilman ongelmiaan.
+
+Huomo näkee kuitenkin tilaa arkkitehtuuriselle työlle mitä ketterimmissä projekteissa, poikkeuksena vain XP-menetelmät. Niiden tavoitteet löytää emergentti rakenne sotii liian suoraan määrätietoista suunnittelua vastaan.

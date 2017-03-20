@@ -1,0 +1,8 @@
+Kandidaatintutkielmassa "Ohjelmistotuotantomenetelmien kehittyminen 1950-
+luvulta nykypäivään" Lauri Suomalainen tekee katsastuksen eri ohjelmistotuotantomenetelmiin, niiden historiaan ja kevyesti pohtii niiden rakentumista toistensa päälle.
+
+Suomalainen tarkastelee ohjelmistokehitystä Haikalan ja Matijärven määrittelemien osa-alueiden kautta, keskittyen kuitenkin menetelmien tarinoihin ja jättäen osa-alueiden yksityiskohtaisen tutkimisen artikkelinsa ulkopuolelle.
+
+Vaikka Kortelainen esitteleekin menetelmät vastauksina edeltäjilleen, käydään artikelissa läpi myös modernien menetelmien huonoja puolia. Nopeaiden ketterien menetelmien varjopuolena näkyy heikompi dokumentoinnin taso. Myöskään asiakkailta vaadittu panostus ei välttämättä ole aina ongelmatonta.
+
+Ohjelmistotuotantomenetelmien tulevaisuuden osalta Kortelainen pitää globalisaatiota ja internettiä keskeisinä pelureina. Teknologia kehittyy kuitenkin koko ajan, eikä ole sanomatta selvää mille ehdoille huomisen menetelmät rakentuvat.
