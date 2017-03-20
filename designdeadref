@@ -1,0 +1,59 @@
+Design dead - software designing
+In XP (Extreme Programming) design has changed from designing beforehand to evolutionary design where design is built as the program is being built.
+
+Two designs:
+1. Evolutionary design
+tactical decisions that
+- make the code harder to alter
+- make bugs appear easier and harder to fix
+- results in a poor design
+
+2. Planned design
+planning beforehand
+- changing plan can be difficult
+- designer would need to be skilled enough to foresee any changes later on
+- building methods and requirements change frequently and are impossible to foresee
+
+"as the project runs, it becomes exponentially more expensive to make changes"
+
+XP tries to overcome evolutionary design's problems by means of automated tests, refactoring and continuous integration as well as other means. They flatten then exponential curve and enable design and changes to happen later on in development.
+This means design can happen at the beginning and during the development instead of being limited to the beginning.
+
+You don't want to spend effort adding new capability that won't be needed until a future iteration. And even if the cost is zero, you still don't want to add it because it increases the cost of modification even if it costs nothing to put in.
+
+Making a complex system simple while making it and nonrepetitive is not easy. And what is simple for someone that knows the design of a system might not be simple for someone else that is not familiar with the specific techniques used.
+Instead of thinking what is the simplest design you can later on refactor code if needed. Keep it simple enough, dont spend too much work on it unless necessary. Keeping repetitiveness off will make code easier to refactor later on.
+
+Design patterns are methods that are good to know, but you should not over use them. Use them when needed, dont force them on your code.
+Often design patterns come into play when code is refactored and not when it is written the first time.
+
+Begin by assessing what the likely architecture is. Be ready to simplify your architecture as soon as you see that part of the architecture isn't adding anything.
+
+Some people will use diagrams and some won't.
+Keep your diagrams simple - dont draw every class/connection/attribute..
+Use diagrams to aid planning, but dont try to keep them as permanent uptodate artifacts.
+Diagrams should not be final, they simply aid the design or understanding and once they have done that, they can be scrapped.
+- Documentation is a user story! :o
+
+People read into names in different ways. Should you differentiate yourself from programmers as a leader? No.
+The best thing a leader can do is to help junior programmers to do decisions themselves. There is also no space for lone heroes.
+
+If you can easily change your decisions, this means it's less important to get them right.
+The system that allows this also makes errors show up early. It can be useful to make a prototype implementation that is possible to be thrown away to see the difficulties with making something.
+
+It is important to have people with a will to apply these methods. A few lookouts that read the code and take action when something seems inconsistent or threatens the quality of the code.
+
+Refactorin in and out stuff might not be trivial. If you have made a feature multiple times and you are confident in knowing what needs to be done, it can be fine to do so early on. But if you have no idea, it can be harmful to add a new feature that will change multiple times and requires maintenance.
+It is important to make a quick first release of working software. Do so even with the cost of later refactoring and improvement of the system. First release is a base to work on and grows credibility.
+
+Pushing in code without changing anything that exists might be a sign of no design being done.
+It is difficult to see if design happens if it is made while programming, but if it is, then something existing must also be changing.
+Also if things are getting harder to add in or additions edit multiple areas of code, then clearly design is crippling and repetion of code is starting to build.
+
+Is design dead? No, but it is changing.
+-    A constant desire to keep code as clear and simple as possible
+-    Refactoring skills so you can confidently make improvements whenever you see the need.
+-    A good knowledge of patterns: not just the solutions but also appreciating when to use them and how to evolve into them.
+-    Designing with an eye to future changes, knowing that decisions taken now will have to be changed in the future.
+-    Knowing how to communicate the design to the people who need to understand it, using code, diagrams and above all: conversation.
+
