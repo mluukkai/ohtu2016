@@ -2,8 +2,8 @@ package ohtu;
 
 public class TennisGame {
     
-    private int m_score1 = 0;
-    private int m_score2 = 0;
+    private int player1Score = 0;
+    private int player2Score = 0;
     private String player1Name;
     private String player2Name;
 
@@ -13,68 +13,62 @@ public class TennisGame {
     }
 
     public void wonPoint(String playerName) {
-        if (playerName == "player1")
-            m_score1 += 1;
+        if (this.player1Name.equals(playerName))
+            player1Score += 1;
         else
-            m_score2 += 1;
+            player2Score += 1;
     }
 
     public String getScore() {
-        String score = "";
-        int tempScore=0;
-        if (m_score1==m_score2)
+        String score;
+        if (player1Score==player2Score)
         {
-            switch (m_score1)
-            {
-                case 0:
-                        score = "Love-All";
-                    break;
-                case 1:
-                        score = "Fifteen-All";
-                    break;
-                case 2:
-                        score = "Thirty-All";
-                    break;
-                case 3:
-                        score = "Forty-All";
-                    break;
-                default:
-                        score = "Deuce";
-                    break;
-                
-            }
+            score = getTennisTermForTie(player1Score);
         }
-        else if (m_score1>=4 || m_score2>=4)
+        else if (player1Score>=4 || player2Score>=4)
         {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            score = getTennisTermForAdvantage(player1Score, player2Score);
         }
         else
         {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
+            score = getTennisTermForScore(player1Score) 
+                    +"-"+ 
+                    getTennisTermForScore(player2Score);
         }
         return score;
     }
+    
+    
+    
+    private String getTennisTermForScore(int score) {
+        switch(score)
+            {
+                case 0:
+                    return "Love";
+                case 1:
+                    return "Fifteen";
+                case 2:
+                    return "Thirty";
+                case 3:
+                    return "Forty";
+                default:
+                    return "Deuce";
+            }
+    }
+    
+    private String getTennisTermForAdvantage(int player1Score, int player2Score) {
+        String scoreTerm;
+        int scoreDifference = player1Score-player2Score;
+        if (scoreDifference==1) scoreTerm ="Advantage player1";
+        else if (scoreDifference ==-1) scoreTerm ="Advantage player2";
+        else if (scoreDifference>=2) scoreTerm = "Win for player1";
+        else scoreTerm ="Win for player2";
+        return scoreTerm;
+    }
+    
+    private String getTennisTermForTie(int tiedScore) {
+        if (tiedScore >= 4) return getTennisTermForScore(tiedScore);
+        else return getTennisTermForScore(tiedScore)+"-All";
+    }
+    
 }

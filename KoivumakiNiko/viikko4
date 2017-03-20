@@ -1,0 +1,7 @@
+Vihdoinkin flunssasta toipuneena kykenin taas käymään hommiin. Valitettavasti tauti tuli karistettua vasta sunnuntaina, joten aikaa tehtäviin tutustumiseen jäi vähänlaisesti.
+
+- Mavenin riippuvuudet aukesivat aika helposti, onhan niitä tullut säädettyä jo javalabrasta lähtien. 
+- Gitin tägit olivat puolestaan uusi ilmiö, mutta varsin kätevä ja selkeä sellainen. 
+- Useamman etärepositorion hyödyntäminen jäi hieman avoimeksi. Olisiko ajatuksena se, että minulla ja Pekalla (nimi keksitty) olisi oma yhteinen etärepo joka olisi kuitenkin irrallaan SoftaTalo AB:n projektin päälinjasta? Jotenkin tuntuu että meillä olisi kätevämpää ehkä olla vain omassa kansiossa erillinen forkki. Tämä useamman etärepon hyödyntäminen samasta projektikansiosta jäi vähän auki.
+- Jettyn ja Seleniumin kanssa testaaminen oli kivaa ja toimi hyvin, kunnes Netbeanini päätti kieltää Run -komennon käytön projektille. Vasta koko netbeans-asennuksen siivous selvitti ongelman. Mystinen tapaus.
+- EasyB testien kirjoittaminen alkaa selkeytyä hiljalleen. Ehkä toisto auttaa :)
