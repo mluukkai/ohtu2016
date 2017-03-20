@@ -1,0 +1,1 @@
+C:\Users\Esa Potkonen\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE
