@@ -26,13 +26,11 @@ public class Statistics {
 
     public List<Player> team(String teamName) {
         ArrayList<Player> playersOfTeam = new ArrayList<Player>();
-        
         for (Player player : players) {
             if ( player.getTeam().equals(teamName)) {
                 playersOfTeam.add(player);
             }
         }
-        
         return playersOfTeam;
     }
 
@@ -40,12 +38,10 @@ public class Statistics {
         Collections.sort(players);
         ArrayList<Player> topScorers = new ArrayList<Player>();
         Iterator<Player> playerIterator = players.iterator();
-        
         while (howMany>=0) {
             topScorers.add( playerIterator.next() );            
             howMany--;
         }
-        
         return topScorers;
     }
 
