@@ -1,0 +1,10 @@
+Aihe: Ryhmätyö ohjelmistokehityksessä
+
+Tutkielmassa käytiin läpi ohjelmistokehityksessä ryhmän tärkeyttä
+ja tehokuutta. Yksittäinen ihminen ei voi tehdä yhtä nopeasti tai yhtä hyvää
+ohjelmistoa kuin ryhmä. Ryhmässä työskentelyn ongelmaksi havaittiin kuitenkin
+persoonien erot ja ryhmänjäsenten keskinäinen kommunikointi.
+Ryhmässä olevien keskinäinen kemia on siis tärkeä osa ryhmän toimivuutta.
+Pelkkä ammatillinen osaaminen ei siis takaa täydellistä ryhmää vaan
+siihen vaikuttavat myös sosiaaliset taidot. Tämä on myös huomioitu opetuksessa
+ja tkt-laitoksella onkin enemmän ryhmätöitä ja projekteja kuin ennen.

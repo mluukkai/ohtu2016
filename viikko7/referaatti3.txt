@@ -1,0 +1,11 @@
+Aihe: Metriikat käytänteiden tukena ohjelmiston laadun arvioimisessa
+
+Tutkielmassa käydään läpi ohjelmiston kehitystä ja siihen
+liittyvien virheiden korjaamista. Ohjelmistossa oelvat virheet
+huomataan usein ohjelmiston julkaisemisen jälkeen. Tällöin niiden
+korjaamisesta tulee kallista. Erilaiset metriikat voivat arvioida ohjelmiston
+laatua ja sen komponentteja havaiten kriittiset osa alueet.
+Nämä eivät kuitenkaan ole täysin luotettavia mutta antavat oikeaa 
+suuntaa ohjelmiston laadun varmistamiseen. Mainitaan myös että
+ohjelmistotuotantomenetelmällä on tärkeä osa laadukkaan kehitysprosessin osana.
+ 
