@@ -47,6 +47,7 @@ public class Submission {
     public void setId(int id) {
         this.id = id;
     }
+    private String student_number;
 
     public String getStudent_number() {
         return student_number;
@@ -55,7 +56,7 @@ public class Submission {
     public void setStudent_number(String student_number) {
         this.student_number = student_number;
     }
-
+  
     public String getLast_name() {
         return last_name;
     }
@@ -472,6 +473,11 @@ public class Submission {
         }
         
         return " viikko " + week + ": tehtyjä tehtäviä yhteensä: " + this.getScore() + ", aikaa kului " + hours + ", tehdyt tehtävät:" + tehtavat;
+    }
+    @Override
+    public String toString() {
+        return student_number;
+
     }
     
 }
