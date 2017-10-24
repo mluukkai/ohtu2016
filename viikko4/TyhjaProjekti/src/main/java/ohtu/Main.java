@@ -39,4 +39,8 @@ public class Main {
             }
             System.out.println("\nyhteensä: " + exercises + " tehtävää " + hours + " tuntia");
         }
+public class Main {
+
+    public static void main(String[] args) {
+    }
 }

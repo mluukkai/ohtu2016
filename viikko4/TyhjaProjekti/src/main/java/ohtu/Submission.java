@@ -1,7 +1,6 @@
 package ohtu;
 
 public class Submission {
-    
     private int id;
     private String student_number;
     private String last_name;
@@ -47,6 +46,8 @@ public class Submission {
     public void setId(int id) {
         this.id = id;
     }
+    private String student_number;
+
 
     public String getStudent_number() {
         return student_number;
@@ -472,6 +473,11 @@ public class Submission {
         }
         
         return " viikko " + week + ": tehtyjä tehtäviä yhteensä: " + this.getScore() + ", aikaa kului " + hours + ", tehdyt tehtävät:" + tehtavat;
+
+    @Override
+    public String toString() {
+        return student_number;
+
     }
     
 }
